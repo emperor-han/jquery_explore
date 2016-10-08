@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM对象转化成jQuery对象</title>
+</head>
+<body>
+	<div>元素1</div>
+	<div>元素2</div>
+	<div>元素3</div>
+	<script src="js/jquery-2.2.1.min.js"></script>
+	<script>
+		var div = document.getElementsByTagName('div');
+            
+            //var div1 = div[1];
+            //console.log(div1);
+		    console.log(div);
+		    console.log($(div)[0]);
+		    
+	</script>
+</body>
+</html>

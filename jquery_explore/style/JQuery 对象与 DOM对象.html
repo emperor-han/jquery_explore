@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery 对象 与 DOM对象</title>
+</head>
+<body>
+	<p id="test"></p>
+	<p id="test2"></p>
+   
+	<script>
+	//原生 JavaScript 处理
+		var test = document.getElementById('test');
+		test.innerHTML = "hello world!";
+		test.style.color = 'red';
+		//通过原生DOM模型提供的document.getElementById(“imooc”) 方法获取的DOM元素就是一个DOM对象，再通过innerHTML与style属性处理文本与颜色。
+	</script>
+	<script src="js/jquery-2.2.1.min.js"></script>
+	<script>
+		//jquery 处理
+		var $test2 = $('#test2');
+		//console.log($test2);
+		//$test2.html('hello world!!!');
+		//$test2.css('color','blue');
+		$test2.html('hello world!').css('color','blue');
+		//通过$('#imooc')方法会得到一个$test2的jQuery对象，$test2是一个类数组对象。这个对象里面包含了DOM对象的信息，然后封装了很多操作方法，调用自己的方法html与css，得到的效果与标准的JavaScript处理结果是一致的。
+
+
+		//通过标准的JavaScript操作DOM与jQuyer操作DOM的对比，我们不难发现：
+
+    /*通过jQuery方法包装后的对象，是一个类数组对象。它与DOM对象完全不同，唯一相似的是它们都能操作DOM。
+    通过jQuery处理DOM的操作，可以让开发者更专注业务逻辑的开发，而不需要我们具体知道哪个DOM节点有那些方法，也不需要关心不同浏览器的兼容性问题，我们通过jQuery提供的API进行开发，代码也会更加精短。*/
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery对象转化成DOM对象</title>
+</head>
+<body>
+	<div>元素1</div>
+	<div>元素2</div>
+	<div>元素3</div>
+	<p id="_id"></p>			
+	<p class="_class"></p>
+	<span id="test1"></span>
+	<i class="test2">sdff</i>
+	<script src="js/jquery-2.2.1.min.js"></script>
+	<script>
+		var $div = $('div')//$div 是jquery 对象
+		console.log($div);
+		var div = $div[0] //将jquery 对象 转换为 DOM 对象
+		var div1 = $div.get(1);
+		div1.style.color = 'gold';
+		div.style.color = 'red';
+		var $pp = $('p');
+		console.log($pp);
+		var $test1 = $('#test1');
+		console.log($test1);
+		var $test2 = $('.test2');
+		console.log($test2);
+		$test2[0].style.color = 'lightgreen';
+	</script>
+</body>
+</html>
